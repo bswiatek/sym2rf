@@ -1,0 +1,35 @@
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+    profiler:
+        collect: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+
+doctrine:
+    dbal:
+        driver:   pdo_sqlite
+        host:     localhost
+        port:     null
+        dbname:   test_db
+        user:     root
+        password: null
+        charset:  UTF8
+        path:     %kernel.root_dir%/src/Khepin/BookBundle/Tests/db.sqlite
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: %kernel.root_dir%/data/data.db3
+        # path:     %database_path%
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true

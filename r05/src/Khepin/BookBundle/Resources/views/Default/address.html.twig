@@ -1,0 +1,11 @@
+{% extends "::base.html.twig"%}
+
+{% block body %}
+{{message}}<br><br>
+{{form_start(form)}}
+    {{form_row(form.street)}}
+    {{form_row(form.number)}}
+    {{form_rest(form)}}
+    <button type="submit">Submit</button>
+{{form_end(form)}}
+{% endblock %}

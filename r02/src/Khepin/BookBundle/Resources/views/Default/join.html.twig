@@ -1,0 +1,6 @@
+{% extends "::base.html.twig"%}
+
+{% block body %}
+    {{form(form)}}
+    <p>You ({{user.username}}) just joined {{meetup.name}}.</p>
+{% endblock %}

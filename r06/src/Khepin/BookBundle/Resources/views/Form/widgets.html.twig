@@ -1,0 +1,17 @@
+{% block coordinate_widget %}
+    {{ google_map_container(map) }}
+    {{ google_map_js(map) }}
+    <script type="text/javascript">
+        google.maps.event.addListener(
+            {{map.javascriptVariable}}, {# This comes from Twig #}
+            'click',
+            setValue
+        );
+        function setValue(event) {
+            var input = document.getElementById('{{id}}'); {# The ID also comes from Twig here #}
+            input.value = event.latLng;
+        }
+    </script>
+    {% set readonly = true %}
+    {{ block('form_widget_simple') }}
+{% endblock %}

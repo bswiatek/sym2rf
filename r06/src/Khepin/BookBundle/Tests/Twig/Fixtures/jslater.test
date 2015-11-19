@@ -1,0 +1,10 @@
+--TEST--
+"jslater / jsnow" filter
+--TEMPLATE--
+{{jslater(script)}}
+{{jslater(script)}}{{jsnow()|raw}}
+--DATA--
+return ['script' => 'jquery.js'];
+--EXPECT--
+
+<script type="text/javascript" src="jquery.js" />

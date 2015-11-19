@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<h2>Your events:</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+    </tr>
+    {% for event in events %}
+    <tr>
+        <tr>
+            <td>{{event.name}}</td>
+            <td>{{event.latitude}}</td>
+            <td>{{event.longitude}}</td>
+        </tr>
+    </tr>
+    {% endfor %}
+</table>
+
+{{ jslater('hello') }}
+{{ jslater('hello') }}
+{{ jslater('hello') }}
+{{ jslater('hello') }}
+{{ jslater('hello') }}
+<br>
+{{jsnow()|raw}}
+{% endblock %}

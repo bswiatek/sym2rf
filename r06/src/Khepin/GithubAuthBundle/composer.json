@@ -1,0 +1,19 @@
+{
+    "name": "khepin/github-auth-bundle",
+    "type": "symfony-bundle",
+    "description": "Let your user authenticate to a Symfony2 app through their github account",
+    "keywords": ["authentication, symfony, bundle, github"],
+    "homepage": "http://xxxx.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Machete",
+            "homepage": "http://en.wikipedia.org/wiki/Machete_(film)"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "friendsofofsymfony/user-bundle": "~1.3"
+    }
+}
